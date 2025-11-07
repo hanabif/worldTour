@@ -6,3 +6,6 @@ class Tour(models.Model):
     destination_country = models.CharField(max_length=64)
     Number_of_nights = models.IntegerField()   
     price = models.IntegerField()
+
+    def __str__(self):
+        return f"ID: {self.id}: From {self.origin_country} to {self.destination_country} - {self.Number_of_nights} nights for ${self.price}"
